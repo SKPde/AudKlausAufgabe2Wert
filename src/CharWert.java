@@ -1,31 +1,41 @@
 
-public class CharWert extends Wert{
+public class CharWert extends Wert {
 
 	private char z; // Zeichen
-	public CharWert(char z) { //Konstruktor
+
+	public CharWert(char z) { // Konstruktor
 		this.z = z;
 	}
-	
+
 	public Wert add(Wert w) {
+
+		CharWert neuWert = (CharWert) w;
+
+		return new CharWert((char) (neuWert.z + this.z)); // Additions-Methode
+
+	}
+
+	public Wert mul(Wert w) {
 		
 		CharWert neuWert = (CharWert) w;
 		
-		return new CharWert((char) (neuWert.z + this.z)); // Additions-Methode
-		
+		return new CharWert((char) (neuWert.z * this.z)); // Multiplikations-Methode
+
 	}
-	
-	public Wert mul(Wert w) {
-		return w; // Multiplikations-Methode
-		
-	}
-	
+
 	public String toString() {
-		return null;    // String Darstellung
-		
+		return String.valueOf(z); // String Darstellung
+
 	}
-	
+
 	public boolean equals(Object zahl) {
-		return false;  // Vergleichs-Methode
 		
+		if(zahl instanceof CharWert) {
+			CharWert neuWert = (CharWert) zahl;
+			if(neuWert.z == this.z)
+				return true;
+		}
+		return false; // Vergleichs-Methode
+
 	}
 }
