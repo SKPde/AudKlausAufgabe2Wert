@@ -11,7 +11,7 @@ public class CharWert extends Wert {
 
 		CharWert neuWert = (CharWert) w;
 
-		return new CharWert((char) (neuWert.z + this.z)); // Additions-Methode
+		return new CharWert((char) (neuWert.z + z)); // Additions-Methode
 
 	}
 
@@ -19,7 +19,7 @@ public class CharWert extends Wert {
 		
 		CharWert neuWert = (CharWert) w;
 		
-		return new CharWert((char) (neuWert.z * this.z)); // Multiplikations-Methode
+		return new CharWert((char) (neuWert.z * z)); // Multiplikations-Methode
 
 	}
 
@@ -32,10 +32,10 @@ public class CharWert extends Wert {
 		
 		if(zahl instanceof CharWert) {
 			CharWert neuWert = (CharWert) zahl;
-			if(neuWert.z == this.z)
+			if(neuWert.z == z)
 				return true;
 		}
 		return false; // Vergleichs-Methode
-
+		
 	}
 }

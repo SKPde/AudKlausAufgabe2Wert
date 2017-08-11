@@ -15,7 +15,7 @@ public class Kombi {
 	}
 	
 	public Wert mul (Kombi k) {
-		return a.add(k.a).mul(b.add(k.b));
+		return (a.add(k.a)).mul(b.add(k.b));
 	}
 
 }
