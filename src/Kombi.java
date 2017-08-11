@@ -9,10 +9,15 @@ public class Kombi {
 	}
 
 	public void erhoehenUm(Wert s) {
-
+		a = a.mul(s);
+		b = b.mul(s);
+		
 	}
 	
 	public Wert mul (Kombi k) {
+		
+		
+		
 		return null;
 		
 	}
